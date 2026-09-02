@@ -1,0 +1,90 @@
+generated: '2026-09-02'
+method: probed
+source: live HTTP probe of every Unicorn Auctions host known to the profile
+note: >-
+  Every named /.well-known/ path was probed on all three reachable Unicorn Auctions
+  hosts. Nothing was served: the marketing/bidding site (Next.js) and the help centre
+  (HubSpot) return their own 404 HTML shell for every path, and the API backend
+  (api.unicornauctions.com, a Rails app) returns its default 404. NO WellKnown and NO
+  SecurityTxt pointer is emitted, because not one path returned a real document — this
+  file records a verified absence, not a presence.
+hit_count: 0
+path_echo_control: passed
+soft_404_control:
+  note: >-
+    Both www.unicornauctions.com and help.unicornauctions.com answer with an HTML 404
+    body, and the negative-control path returned the same 404 status and body size as
+    every real path, so neither host is a 200 catch-all. No hit could be manufactured.
+  probes:
+    - url: https://www.unicornauctions.com/.well-known/unicorn-auctions-negative-control-7f3ab91c.json
+      status: 404
+      bytes: 79451
+    - url: https://api.unicornauctions.com/.well-known/unicorn-auctions-negative-control-7f3ab91c.json
+      status: 404
+      bytes: 1722
+    - url: https://help.unicornauctions.com/.well-known/unicorn-auctions-negative-control-7f3ab91c.json
+      status: 404
+      bytes: 90516
+hosts:
+  - host: https://www.unicornauctions.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /.well-known/aauth-resource.json
+        status: 404
+      - path: /.well-known/ucp.json
+        status: 404
+      - path: /.well-known/acp.json
+        status: 404
+  - host: https://api.unicornauctions.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /.well-known/aauth-resource.json
+        status: 404
+      - path: /.well-known/ucp.json
+        status: 404
+      - path: /.well-known/acp.json
+        status: 404
+  - host: https://help.unicornauctions.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404

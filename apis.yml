@@ -1,7 +1,19 @@
 aid: unicorn-auctions
 name: Unicorn Auctions
-description: 'Unicorn Auctions is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Unicorn Auctions is a Chicago-based online auction marketplace for rare spirits and
+  fine wine, founded in 2019 by A.J. Heindel, Cody Modeer and Phil Mikhaylov out of the
+  city's restaurant and bar trade. Every lot is sold on consignment: Unicorn
+  authenticates, appraises, photographs and digitizes each bottle before listing it in
+  one to three weekly online auctions that can carry several thousand lots spanning
+  bourbon, scotch, Japanese whisky, tequila, agave spirits and wine. The company also
+  runs a bonded vault storage service for collectors, and publishes The Unicorn Review,
+  an editorial and auction-intelligence blog. Bidding is entirely digital, through the
+  web platform and native iOS and Android apps. Unicorn Auctions publishes no public
+  developer program - no OpenAPI, SDK, webhook catalog or developer portal - and the
+  api.unicornauctions.com backend that serves its own clients is private, undocumented
+  and disallowed in robots.txt.
+image: https://www.unicornauctions.com/images/brand/apple-touch-icon-180x180.png
 url: https://raw.githubusercontent.com/api-evangelist/unicorn-auctions/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +24,14 @@ created: '2026-09-02'
 modified: '2026-09-02'
 tags:
 - Company
+- Auctions
+- Marketplace
+- E-Commerce
+- Collectibles
+- Wine
+- Spirits
+- Retail
+- Consumer
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +39,59 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/unicorn-auctions-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/unicorn-auctions_stock/
+  url: https://www.unicornauctions.com/
+- type: Support
+  url: https://help.unicornauctions.com/
+- type: Blog
+  url: https://www.unicornauctions.com/unicorn-review
+- type: GitHubOrganization
+  url: https://github.com/unicorn-auctions
+- type: SignUp
+  url: https://www.unicornauctions.com/signup
+- type: Login
+  url: https://www.unicornauctions.com/login
+- type: TermsOfService
+  url: https://www.unicornauctions.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.unicornauctions.com/privacy-policy
+- type: Careers
+  url: https://www.unicornauctions.com/careers
+- type: LinkedIn
+  url: https://www.linkedin.com/company/unicorn-auctions-llc
+- type: LLMsTxt
+  url: llms/unicorn-auctions-llms.txt
+x-enrichment:
+  date: '2026-09-02'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Unicorn Auctions ships only end-user products - a Next.js bidding site and iOS/Android
+    apps - and publishes nothing for developers: no /developers, /developer or /api-docs
+    page exists, its GitHub organization has zero public repositories, no first-party SDK
+    is on any registry, and the private Rails backend at api.unicornauctions.com answers
+    404 on every documentation and contract path while robots.txt explicitly disallows /api/.
+  evidence:
+    - url: https://www.unicornauctions.com/developers
+      status: 404
+    - url: https://www.unicornauctions.com/openapi.json
+      status: 404
+    - url: https://api.unicornauctions.com/openapi.json
+      status: 404
+    - url: https://api.unicornauctions.com/graphql
+      status: 404
+    - url: https://www.unicornauctions.com/.well-known/agent-card.json
+      status: 404
+    - url: https://www.unicornauctions.com/llms.txt
+      status: 404
+    - url: https://api.github.com/orgs/unicorn-auctions/repos
+      status: 200
+    - url: https://registry.npmjs.org/unicorn-auctions
+      status: 404
+  checked: '2026-09-02'

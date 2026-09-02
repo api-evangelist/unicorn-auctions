@@ -1,0 +1,60 @@
+# Unicorn Auctions
+
+> Unicorn Auctions is a Chicago-based online auction marketplace for rare spirits and
+> fine wine. Founded in 2019, it consigns, authenticates, appraises and photographs
+> every bottle before listing it in one to three weekly digital auctions, and operates
+> a vault storage service for collectors. Bidding happens on the web platform and on
+> native iOS and Android apps. **Unicorn Auctions publishes no public API, SDK,
+> webhook surface or developer program.** The `api.unicornauctions.com` backend that
+> serves its own clients is private and undocumented, and `robots.txt` disallows
+> `/api/`. There is nothing here for an agent to call.
+
+## Status for machine consumers
+
+- No OpenAPI, Swagger, GraphQL SDL, AsyncAPI, gRPC/Protobuf or WSDL contract is published anywhere.
+- No MCP server, A2A agent card, or `/.well-known/` discovery document is served on any host (probed 2026-09-02, all 404).
+- No first-party SDK exists on npm, PyPI, RubyGems, Maven Central, NuGet, crates.io or pkg.go.dev.
+- The GitHub organization exists but publishes zero public repositories.
+- Agent access to inventory is therefore limited to the public HTML site, which is crawlable (`robots.txt` allows `/`, disallows `/api/`, `/auth`, `/exchange`) and publishes a sitemap.
+
+## Company
+
+- [Unicorn Auctions](https://www.unicornauctions.com/): Rare spirits and fine wine auction marketplace.
+- [Our Company](https://www.unicornauctions.com/our-company): Founding story, scale figures, contact.
+- [Services](https://www.unicornauctions.com/services): Consignment, authentication, appraisal, vault.
+- [Careers](https://www.unicornauctions.com/careers): Open roles.
+- [GitHub organization](https://github.com/unicorn-auctions): No public repositories.
+
+## Marketplace
+
+- [Live and upcoming auctions](https://www.unicornauctions.com/auctions/live-upcoming): Current sales.
+- [Ended auctions](https://www.unicornauctions.com/auctions/ended): Realised prices.
+- [Search](https://www.unicornauctions.com/search): Lot search across auctions.
+- [Sell](https://www.unicornauctions.com/sell): Consignor intake.
+- [Selling guidelines](https://www.unicornauctions.com/selling-guidelines): Bottle minimums and restricted items.
+- [Vault](https://www.unicornauctions.com/vault): Bonded storage for collections.
+- [Sitemap](https://unicornauctions.com/sitemap.xml): Machine-readable index of the public site.
+
+## Apps
+
+- [iOS app](https://apps.apple.com/us/app/unicorn-auctions/id1491599776): Mobile bidding.
+- [Android app](https://play.google.com/store/apps/details?id=com.auctionmobility.auctions.unicornauctions): Mobile bidding.
+
+## Editorial
+
+- [The Unicorn Review](https://www.unicornauctions.com/unicorn-review): Spirits, wine and auction-intelligence writing.
+
+## Policies and support
+
+- [Help Center](https://help.unicornauctions.com/): Support knowledge base.
+- [Terms of Use](https://www.unicornauctions.com/terms-of-use)
+- [Conditions of Sale](https://www.unicornauctions.com/conditions-of-sale)
+- [Privacy Policy](https://www.unicornauctions.com/privacy-policy)
+- [Delivery and Shipping Policy](https://www.unicornauctions.com/delivery-shipping-policy)
+- Customer service: customerservice@unicornauctions.com
+
+## Provenance
+
+Generated 2026-09-02 by the API Evangelist enrichment pipeline from apis.yml and live
+probes of unicornauctions.com. Unicorn Auctions does not serve an llms.txt of its own
+(https://www.unicornauctions.com/llms.txt returned 404 on 2026-09-02).
